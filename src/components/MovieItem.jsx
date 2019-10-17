@@ -8,10 +8,10 @@ class MovieItem extends Component {
         return (
             <div className="movie-item">
                 <img src={poster} alt={item.Title}/>
-                <p>{`Name: ${item.Title}`}</p>
-                <p>{`Year: ${item.Year}`}</p>
-                <p>{`imdbID: ${item.imdbID}`}</p>
-                <p>{`Type: ${item.Type}`}</p>
+                <p><span className="bold">Name: </span>{item.Title}</p>
+                <p><span className="bold">Year: </span>{item.Year}</p>
+                <p><span className="bold">imdbID: </span>{item.imdbID}</p>
+                <p><span className="bold">Type: </span>{item.Type}</p>
             </div>
         );
     }

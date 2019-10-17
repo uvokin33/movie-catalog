@@ -20,6 +20,22 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
   }
 
+  p {
+    margin: 0;
+
+    > .bold {
+      font-weight: bold;
+    }
+
+    &:nth-child(2) {
+      margin-top: 10px;
+    }
+  
+    &:last-child {
+      margin-bottom: 25px
+    }
+  }
+
   > h3 {
     word-wrap: break-word;
   }
@@ -28,6 +44,10 @@
 img {
   width: 300px;
   height: 400px;
+}
+
+button {
+  margin: 1px;
 }
 
 .page-index {
