@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MovieItem from './MovieItem';
 import PageIndex from './PageIndex';
+import '../styles/Page.scss';
 
 class Page extends Component {
     constructor(props) {
@@ -24,11 +25,12 @@ class Page extends Component {
         if (data.movies.length) {
             title = <h1>{`You seached for: ${data.searched}, ${data.totalResults} results found`}</h1>;
         }
+        const pageContent = this.props.isLoading ? <div class="loader"></div> : data.movies.map(item => <MovieItem item={item} />);
         return (
             <div className="page">
                 {title}
                 <div className="page-content">
-                    {data.movies.map(item => <MovieItem item={item} />)}
+                    {pageContent}
                 </div>
                 <PageIndex key="page-index" data={data} pageChanged={this.props.pageChanged}/>
             </div>
@@ -37,6 +39,7 @@ class Page extends Component {
 }
 
 Page.propTypes = {
+    isLoading: PropTypes.bool.isRequired,
     data: PropTypes.object.isRequired,
     pageChanged: PropTypes.func.isRequired,
 };

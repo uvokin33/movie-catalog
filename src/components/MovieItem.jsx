@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../styles/MovieItem.scss';
 
 class MovieItem extends Component {
     render() {

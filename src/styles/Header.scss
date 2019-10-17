@@ -1,3 +1,40 @@
 .header {
+    padding: 30px;
+    text-align: justify;
     background-color: #02a4ff;
+  
+    & > * {
+      display: initial;
+    }
+  
+    .search-box {
+      margin-left: 30px;
+      width: 80%;
+      input {
+        width: 60%;
+      }
+    }
+  
+    .user {
+      margin-left: 20px;
+      display: inline-grid;
+      vertical-align: middle;
+      text-align: right;
+  
+      > .user-container {
+        display: flex;
+  
+        > img {
+          width: 20px;
+          height: 20px;
+          margin-top: 21px;
+        }
+      }
+    }
+}
+
+.header::after {
+    content: '';
+    display: initial;
+    width: 100%;
 }

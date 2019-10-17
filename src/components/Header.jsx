@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import SearchBox from './SearchBox';
 import User from './User';
-import '../styles/Header.scss'
+import '../styles/Header.scss';
 
 class Header extends Component {
     render() {

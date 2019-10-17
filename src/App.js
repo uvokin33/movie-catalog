@@ -9,6 +9,7 @@ class App extends Component {
     super(props);
     this.state = {
       currentPage: 1,
+      isLoading: false,
       data: {
         movies: [],
         error: '',
@@ -20,6 +21,7 @@ class App extends Component {
 
   searchBoxChanged = (event, value='') => {
     const searchValue = value ? value : event.target.value;
+    this.setState({isLoading: true});
     axios.get(`https://www.omdbapi.com/?i=tt3896198&apikey=8523cbb8&s=${searchValue}&page=${this.state.currentPage}`)
         .then(response => {
           let movies = [];
@@ -32,7 +34,8 @@ class App extends Component {
           } else {
             error = 'Undefined error';
           }
-          this.setState({"data": { totalResults: data.totalResults, searched: searchValue, movies, error }});
+          console.log('end');
+          this.setState({isLoading: false, data: { totalResults: data.totalResults, searched: searchValue, movies, error }});
         })
   };
 
@@ -46,9 +49,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="main">
         <Header searchBoxChanged={this.searchBoxChanged}/>
-        <Page key="page" data={this.state.data} pageChanged={this.pageChanged}/>
+        <Page key="page" data={this.state.data} isLoading={this.state.isLoading} pageChanged={this.pageChanged}/>
       </div>
     );
   }
