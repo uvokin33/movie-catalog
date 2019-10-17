@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  padding: 10px;
+}
+
+.page-content {
+  display: grid;
+  grid-template-columns: 320px 320px 320px 320px 320px;
+  border: 2px solid #282c34;
+  padding: 10px;
+}
+
+img {
+  width: 300px;
+  height: 400px;
+}
