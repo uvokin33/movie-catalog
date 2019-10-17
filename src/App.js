@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import Header from './components/Header'
 import Page from './components/Page'
-import './styles/App.css';
+import './styles/App.scss';
 
 class App extends Component {
   constructor(props) {

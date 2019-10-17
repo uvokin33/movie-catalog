@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+  padding: 10px;
+}
+
+.page {
+  border: 2px solid #282c34;
+}
+
+.page-content {
+  padding: 10px;
+}
+
+.movie-item {
+  display: inline-grid;
+  padding-right: 10px;
+  max-width: 300px;
+  
+  > img {
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  }
+
+  > h3 {
+    word-wrap: break-word;
+  }
+}
+
+img {
+  width: 300px;
+  height: 400px;
+}
+
+.page-index {
+  padding-bottom: 10px;
+}

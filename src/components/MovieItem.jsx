@@ -8,7 +8,7 @@ class MovieItem extends Component {
         return (
             <div className="movie-item">
                 <img src={poster} alt={item.Title}/>
-                <h3>{`Title: ${item.Title}`}</h3>
+                <p>{`Name: ${item.Title}`}</p>
                 <p>{`Year: ${item.Year}`}</p>
                 <p>{`imdbID: ${item.imdbID}`}</p>
                 <p>{`Type: ${item.Type}`}</p>
