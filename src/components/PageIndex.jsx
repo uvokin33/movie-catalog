@@ -9,7 +9,10 @@ class PageIndex extends Component {
         return (
             <div className="page-index">
                 &lt;
-                {[...Array(parseInt(totalPages))].map((item, index) => (<button id={index + 1} onClick={pageChanged}>{index + 1}</button>))}
+                {[...Array(parseInt(totalPages))].map((item, index) => {
+                   const pageIndex = index + 1;
+                   return (<button id={pageIndex} onClick={() => pageChanged(pageIndex)}>{pageIndex}</button>)
+                })}
                 &gt;
             </div>
         );
